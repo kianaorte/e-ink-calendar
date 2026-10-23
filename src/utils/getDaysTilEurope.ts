@@ -1,4 +1,4 @@
-export const calculateEuropeDate = () => {
+export const getDaysTilEurope = () => {
   const today = new Date();
   const futureDate = new Date("2027-04-21");
   const diffInMs = futureDate.getTime() - today.getTime();
