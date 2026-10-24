@@ -7,8 +7,9 @@ import {
   spacing,
 } from "@/constants/theme";
 import { getDaysTilEurope } from "@/utils/getDaysTilEurope";
+import { router } from "expo-router";
 import { CloudSun, PlaneTakeoff } from "lucide-react-native";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 const events = [
   { id: 1, time: "9:30am", title: "Standup" },
@@ -27,6 +28,7 @@ export default function HomeScreen() {
 
   return (
     <View>
+      <Button title="Calendar" onPress={() => router.push("/calendar")} />
       <View style={styles.banner}>
         <Text style={styles.heading}>Friday</Text>
         <View style={styles.dateRow}>
